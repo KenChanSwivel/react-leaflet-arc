@@ -1,4 +1,6 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
+
 import { Path } from 'react-leaflet';
 import L from 'leaflet'
 import  './leaflet.arc';
@@ -20,7 +22,7 @@ export default class Arc extends Path {
     return L.arcs(position, option, this.getOptions(options))
   }*/
 
-  
+
   createLeafletElement (props) {
     const { position, option, ...options } = props
     return L.Polyline.Arc(position.from, position.to, option,this.getOptions(options))
